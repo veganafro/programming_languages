@@ -4,6 +4,8 @@
 (* To run the test, add a new line to the top of this file: use "homeworkname.sml"; *)
 (* All the tests should evaluate to true. For example, the REPL should say: val test1 = true : bool *)
 
+use "hw_0.sml";
+
 val test1 = double 17 = 34
 
 val test2 = double 0 = 0
