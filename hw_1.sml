@@ -1,1 +1,5 @@
-fun is_older(date_1, date_2) = date_1 < date_2
+fun is_older (date_1:int, date_2:int) =
+    if date_1 < 0 orelse date_2 < 0
+    then false
+    else date_1 < date_2
+
