@@ -3,3 +3,10 @@ fun is_older (date_1:int, date_2:int) =
     then false
     else date_1 < date_2
 
+fun number_in_month (dates:int list, month:int) =
+    if null dates
+    then 0
+    else
+	if hd(dates) % month = 0
+	then 1 + number_in_month(tl dates, month)
+	else 0 + number_in_month(tl dates, month)    
