@@ -8,10 +8,16 @@ fun number_in_month (dates:int list, month:int) =
     if null dates
     then 0
     else
+	let val year_and_month = hd dates / (hd dates mod 365)
+	if month = year_and_month mod 12
+						then
+						    
+	(*
 	if 0 = hd dates mod month
 	then 1 + number_in_month(tl dates, month)
 	else 0 + number_in_month(tl dates, month)
-
+	*)
+	
 fun number_in_months (dates:int list, months:int list) =
     if null dates orelse null months
     then 0
