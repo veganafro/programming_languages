@@ -9,9 +9,9 @@ fun number_in_month (dates:(int * int * int) list, month:int) =
 	then 1 + number_in_month(tl dates, month)
 	else 0 + number_in_month(tl dates, month)
 
-(* needs work to fix argument types
-fun number_in_months (dates:int list, months:int list) =
+fun number_in_months (dates:(int * int * int) list, months:int list) =
     if null dates orelse null months
     then 0
     else number_in_month(dates, hd months) + number_in_months(dates, tl months)
-*)
+
+fun date_in_months (dates: (int * int * int) list, month: int) =
