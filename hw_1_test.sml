@@ -23,3 +23,5 @@ val months = [
     9,
     8
 ];
+
+val test_number_in_months = number_in_months(dates, months) = 3;
