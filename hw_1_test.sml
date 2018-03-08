@@ -13,4 +13,5 @@ val dates = [
     (1993, 2, 16)
 ];
 
-val test_number_in_month_1
+val test_number_in_month_1 = number_in_month(dates, 2) = 2;
+val test_number_in_month_2 = number_in_month(dates, 9) = 1;
