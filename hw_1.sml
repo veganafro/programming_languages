@@ -33,3 +33,4 @@ fun dates_in_months (dates: (int * int * int) list, months: int list) =
     then []
     else dates_in_month(dates, hd months) @ dates_in_months(dates, tl months);
 
+fun get_nth(strings: string list, n: int)
