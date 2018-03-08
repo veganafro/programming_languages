@@ -5,7 +5,7 @@ fun is_older (date_1:int * int * int, date_2:int * int * int) =
 	else
 	    #2 date_1 < #2 date_2
     else
-	#1 date_1 < #1 date_2
+	#1 date_1 < #1 date_2;
 				      
 fun number_in_month (dates:(int * int * int) list, month:int) =
     if null dates
@@ -13,12 +13,12 @@ fun number_in_month (dates:(int * int * int) list, month:int) =
     else
 	if #2 (hd dates) = month
 	then 1 + number_in_month(tl dates, month)
-	else 0 + number_in_month(tl dates, month)
+	else 0 + number_in_month(tl dates, month);
 
 fun number_in_months (dates:(int * int * int) list, months:int list) =
     if null dates orelse null months
     then 0
-    else number_in_month(dates, hd months) + number_in_months(dates, tl months)
+    else number_in_month(dates, hd months) + number_in_months(dates, tl months);
 
 fun dates_in_month (dates: (int * int * int) list, month: int) =
     if null dates
@@ -26,9 +26,10 @@ fun dates_in_month (dates: (int * int * int) list, month: int) =
     else
 	if #2 (hd dates) = month
 	then hd dates :: dates_in_month(tl dates, month)
-	else dates_in_month(tl dates, month)
+	else dates_in_month(tl dates, month);
 
 fun dates_in_months (dates: (int * int * int) list, months: int list) =
     if null dates orelse null months
     then []
-    else dates_in_month(dates, hd months) @ dates_in_months(dates, tl months)
+    else dates_in_month(dates, hd months) @ dates_in_months(dates, tl months);
+
