@@ -15,3 +15,11 @@ val dates = [
 
 val test_number_in_month_1 = number_in_month(dates, 2) = 2;
 val test_number_in_month_2 = number_in_month(dates, 9) = 1;
+
+val months = [
+    10,
+    5,
+    12,
+    9,
+    8
+];
