@@ -39,4 +39,11 @@ fun get_nth (strings: string list, n: int) =
     else
 	get_nth(tl strings, n - 1);
 
+fun get_month (month: int) =
+    case month of
+	1 => "January"
+     | 2 => "Febrary"
+     | 3 => "March"
+		
 
+fun date_to_string (date: (int * int * int)) =
