@@ -53,7 +53,7 @@ fun get_month (month: int) =
      | 10 => "October"
      | 11 => "November"
      | 12 => "December"
-		 
+     | _ => ();
 		
 
 fun date_to_string (date: (int * int * int)) =
