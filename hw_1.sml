@@ -57,3 +57,4 @@ fun get_month (month: int) =
 		
 
 fun date_to_string (date: (int * int * int)) =
+    get_month(#2 date) ^ ", " ^ Int.toString(#3 date) ^ " " ^ Int.toString(#1 date);
