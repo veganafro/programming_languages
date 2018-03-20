@@ -64,3 +64,22 @@ fun number_before_reaching_sum (sum: int, numbers: int list) =
     then 0
     else
 	1 + number_before_reaching_sum(sum - hd numbers, tl numbers);
+
+fun what_month (day_of_year: int) =
+    number_before_reaching_sum(
+	day_of_year,
+	[
+	  31,
+	  29,
+	  31,
+	  30,
+	  31,
+	  30,
+	  31,
+	  31,
+	  30,
+	  31,
+	  30,
+	  31
+	]
+    );
