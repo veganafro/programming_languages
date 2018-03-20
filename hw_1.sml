@@ -84,7 +84,7 @@ fun what_month (day_of_year: int) =
 	]
     );
 
-fun month_range(day_1: int, day_2: int) =
+fun month_range (day_1: int, day_2: int) =
     if day_1 > day_2
     then []
     else
@@ -95,3 +95,4 @@ fun month_range(day_1: int, day_2: int) =
 	    [get_month(month_1)] @ month_range(day_1 + 1, day_2)
 	end;
 
+fun oldest ()
