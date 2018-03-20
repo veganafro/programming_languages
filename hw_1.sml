@@ -95,4 +95,6 @@ fun month_range (day_1: int, day_2: int) =
 	    [get_month(month_1)] @ month_range(day_1 + 1, day_2)
 	end;
 
+(*
 fun oldest ()
+*)
