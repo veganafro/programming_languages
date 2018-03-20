@@ -92,3 +92,6 @@ fun month_range(day_1: int, day_2: int) =
 	    val month_1 = what_month(day_1)
 	    val month_2 = what_month(day_2)
 	in
+	    [get_month(month_1)] @ month_range(day_1 + 1, day_2)
+	end;
+
