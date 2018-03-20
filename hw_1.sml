@@ -85,8 +85,10 @@ fun what_month (day_of_year: int) =
     );
 
 fun month_range(day_1: int, day_2: int) =
-    let
-	val month_1 = what_month(day_1)
-	val month_2 = what_month(day_2)
-    in
-	
+    if day_1 > day_2
+    then []
+    else
+	let
+	    val month_1 = what_month(day_1)
+	    val month_2 = what_month(day_2)
+	in
