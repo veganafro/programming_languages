@@ -58,3 +58,9 @@ fun get_month (month: int) =
 
 fun date_to_string (date: (int * int * int)) =
     get_month(#2 date) ^ ", " ^ Int.toString(#3 date) ^ " " ^ Int.toString(#1 date);
+
+fun number_before_reaching_sum (sum: int, numbers: int list) =
+    if sum - (hd numbers) <= 0
+    then 0
+    else
+	1 + number_before_reaching_sum(sum - hd numbers, tl numbers);
