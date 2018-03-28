@@ -1,3 +1,11 @@
+(*
+ * is_older compares two dates and returns true if the first date is earlier than the second date.
+ * Dates are represented as tuples with 3 integers. The first item is the year, the second item is
+ * the month, and the third item is the day.
+ *
+ * date_1: a Date
+ * date_2: a Date
+*)
 fun is_older (date_1:int * int * int, date_2:int * int * int) =
     if #1 date_1 = #1 date_2 then
 	if #2 date_1 = #2 date_2 then
