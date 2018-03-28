@@ -95,6 +95,16 @@ fun month_range (day_1: int, day_2: int) =
 	    [get_month(month_1)] @ month_range(day_1 + 1, day_2)
 	end;
 
-(*
-fun oldest ()
-*)
+fun get_oldest (current_oldest: (int * int * int), dates: (int * int * int) list) =
+    if null dates
+    then current_oldest
+    else
+	if is_older(current_oldest, hd dates)
+	then get_oldest(current_oldest, tl dates)
+	else get_oldest(hd dates, tl dates);
+
+fun oldest (dates: (int * int * int) list) =
+    if null dates
+    then NONE
+    else
+	SOME (get_oldest(hd dates, tl dates));
