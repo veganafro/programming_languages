@@ -42,6 +42,13 @@ fun number_in_months (dates: (int * int * int) list, months: int list) =
     then 0
     else number_in_month(dates, hd months) + number_in_months(dates, tl months);
 
+(*
+ * dates_in_month takes a list of Dates and a month represented as an integer then returns a list
+ * containing the Dates from the argument list that are in the month.
+ *
+ * dates: a list of Dates
+ * month: an integer
+ *)
 fun dates_in_month (dates: (int * int * int) list, month: int) =
     if null dates
     then []
