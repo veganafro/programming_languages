@@ -6,7 +6,7 @@
  * date_1: a Date
  * date_2: a Date
 *)
-fun is_older (date_1:int * int * int, date_2:int * int * int) =
+fun is_older (date_1: int * int * int, date_2: int * int * int) =
     if #1 date_1 = #1 date_2 then
 	if #2 date_1 = #2 date_2 then
 	    #3 date_2 < #3 date_2
@@ -22,7 +22,7 @@ fun is_older (date_1:int * int * int, date_2:int * int * int) =
  * dates: a list of Dates
  * month: an integer
 *)
-fun number_in_month (dates:(int * int * int) list, month:int) =
+fun number_in_month (dates: (int * int * int) list, month: int) =
     if null dates
     then 0
     else
@@ -37,7 +37,7 @@ fun number_in_month (dates:(int * int * int) list, month:int) =
  * dates: a list of Dates
  * months: a list of integers
 *)
-fun number_in_months (dates:(int * int * int) list, months:int list) =
+fun number_in_months (dates: (int * int * int) list, months: int list) =
     if null dates orelse null months
     then 0
     else number_in_month(dates, hd months) + number_in_months(dates, tl months);
