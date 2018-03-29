@@ -82,6 +82,12 @@ fun get_nth (strings: string list, n: int) =
     else
 	get_nth(tl strings, n - 1);
 
+(*
+ * get_month is a helper function that takes an integer month and returns the corresponding month
+ * as a string.
+ *
+ * month: an integer
+ *)
 fun get_month (month: int) =
     case month of
 	1 => "January"
