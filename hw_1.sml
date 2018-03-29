@@ -150,6 +150,9 @@ fun what_month (day_of_year: int) =
 	]
     );
 
+(*
+ * month_range
+ *)
 fun month_range (day_1: int, day_2: int) =
     if day_1 > day_2
     then []
