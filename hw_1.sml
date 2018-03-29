@@ -69,6 +69,13 @@ fun dates_in_months (dates: (int * int * int) list, months: int list) =
     then []
     else dates_in_month(dates, hd months) @ dates_in_months(dates, tl months);
 
+(*
+ * get_nth takes a list of strings and an integer n then returns the nth element in the 1-indexed
+ * list.
+ *
+ * strings: a list of strings
+ * n: an integer
+ *)
 fun get_nth (strings: string list, n: int) =
     if n = 0
     then hd strings
