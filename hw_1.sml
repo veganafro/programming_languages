@@ -102,12 +102,24 @@ fun get_month (month: int) =
      | 10 => "October"
      | 11 => "November"
      | 12 => "December"
-     | _ => "";
-		
+     | _ => "";		
 
+(*
+ * date_to_string takes a Date and returns a string in the form Month Day, Year.
+ *
+ * date: a Date
+ *)
 fun date_to_string (date: (int * int * int)) =
     get_month(#2 date) ^ ", " ^ Int.toString(#3 date) ^ " " ^ Int.toString(#1 date);
 
+(*
+ * number_before_reaching_sum takes an integer sum and an int list numbers then returns an integer
+ * n such that the first n values in numbers add to a value less than sum and the first n + 1 values
+ * add to a value greater than sum.
+ *
+ * sum: an integer
+ * numbers: an int list
+ *)
 fun number_before_reaching_sum (sum: int, numbers: int list) =
     if sum - (hd numbers) <= 0
     then 0
