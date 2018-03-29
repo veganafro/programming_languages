@@ -151,7 +151,11 @@ fun what_month (day_of_year: int) =
     );
 
 (*
- * month_range
+ * month_range takes two integers day_1 and day_2 and returns an int list containing the months that
+ * occur between the two days.
+ *
+ * day_1: an integer
+ * day_2: an integer
  *)
 fun month_range (day_1: int, day_2: int) =
     if day_1 > day_2
@@ -172,6 +176,12 @@ fun get_oldest (current_oldest: (int * int * int), dates: (int * int * int) list
 	then get_oldest(current_oldest, tl dates)
 	else get_oldest(hd dates, tl dates);
 
+(*
+ * oldest takes a list of Dates and returns an option of NONE if the argued list is empty or SOME
+ * oldest Date in the argued list otherwise.
+ *
+ * dates: a list of Dates
+ *)
 fun oldest (dates: (int * int * int) list) =
     if null dates
     then NONE
