@@ -30,6 +30,13 @@ fun number_in_month (dates:(int * int * int) list, month:int) =
 	then 1 + number_in_month(tl dates, month)
 	else 0 + number_in_month(tl dates, month);
 
+(*
+ * number_in_months takes a list of Dates and a list of months each represented as integers then
+ * returns the number of Dates that are in any of the months.
+ *
+ * dates: a list of Dates
+ * months: a list of integers
+*)
 fun number_in_months (dates:(int * int * int) list, months:int list) =
     if null dates orelse null months
     then 0
