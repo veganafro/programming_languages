@@ -16,7 +16,9 @@ Any previous bindings are said to be shadowed.
 ```sml
 val x = "derp";
 (*
- * This is allowed.
+ * This is allowed
  * Another binding is added that shadows the previous binding for later declarations
  *)
+val x = 2;
+val res = x * 2; (* res uses the most recent binding for x, which is 2 *)
 ```
