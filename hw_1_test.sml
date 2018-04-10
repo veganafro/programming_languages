@@ -30,3 +30,5 @@ val test_dates_in_month = dates_in_month(dates, 2) = [
 		(1995, 2, 29),
 		(1993, 2, 16)
 	];
+
+val test_dates_in_months
