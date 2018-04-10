@@ -25,3 +25,14 @@ val months = [
 ];
 
 val test_number_in_months = number_in_months(dates, months) = 3;
+
+val test_dates_in_month = dates_in_month(dates, 2) = [
+		(1995, 2, 29),
+		(1993, 2, 16)
+	];
+
+val test_dates_in_months = date_in_months(dates, months) = [
+		(1996, 10, 17),
+		(1997, 12, 23),
+		(1996, 9, 18)
+	];
