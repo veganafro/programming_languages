@@ -158,20 +158,20 @@ fun month_range (day_1: int, day_2: int) =
     if day_1 > day_2
     then []
     else
-	let
-	    val month_1 = what_month(day_1)
-	    val month_2 = what_month(day_2)
-	in
-	    [get_month(month_1)] @ month_range(day_1 + 1, day_2)
-	end;
+		let
+			val month_1 = what_month(day_1)
+			val month_2 = what_month(day_2)
+		in
+			[get_month(month_1)] @ month_range(day_1 + 1, day_2)
+		end;
 
 fun get_oldest (current_oldest: (int * int * int), dates: (int * int * int) list) =
     if null dates
     then current_oldest
     else
-	if is_older(current_oldest, hd dates)
-	then get_oldest(current_oldest, tl dates)
-	else get_oldest(hd dates, tl dates);
+		if is_older(current_oldest, hd dates)
+		then get_oldest(current_oldest, tl dates)
+		else get_oldest(hd dates, tl dates);
 
 (*
  * oldest takes a list of Dates and returns an option of NONE if the argued list is empty or SOME
@@ -183,4 +183,4 @@ fun oldest (dates: (int * int * int) list) =
     if null dates
     then NONE
     else
-	SOME (get_oldest(hd dates, tl dates));
+		SOME (get_oldest(hd dates, tl dates));
