@@ -7,13 +7,14 @@
  * date_2: a Date
  *)
 fun is_older (date_1: int * int * int, date_2: int * int * int) =
-    if #1 date_1 = #1 date_2 then
-	if #2 date_1 = #2 date_2 then
-	    #3 date_2 < #3 date_2
-	else
-	    #2 date_1 < #2 date_2
-    else
-	#1 date_1 < #1 date_2;
+    if #1 date_1 = #1 date_2
+	then
+		if #2 date_1 = #2 date_2
+		then
+			#3 date_2 < #3 date_2
+		else
+			#2 date_1 < #2 date_2
+	else #1 date_1 < #1 date_2;
 
 (*
  * number_in_month takes a list of Dates and a month represented by an integer then returns how many
