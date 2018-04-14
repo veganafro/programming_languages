@@ -121,7 +121,7 @@ fun number_before_reaching_sum (sum: int, numbers: int list) =
     if sum - (hd numbers) <= 0
     then 0
     else
-	1 + number_before_reaching_sum(sum - hd numbers, tl numbers);
+		1 + number_before_reaching_sum(sum - hd numbers, tl numbers);
 
 (*
  * what_month takes an integer day_of_year and returns what month the argued value is in.
@@ -130,21 +130,21 @@ fun number_before_reaching_sum (sum: int, numbers: int list) =
  *)
 fun what_month (day_of_year: int) =
     number_before_reaching_sum(
-	day_of_year,
-	[
-	  31,
-	  29,
-	  31,
-	  30,
-	  31,
-	  30,
-	  31,
-	  31,
-	  30,
-	  31,
-	  30,
-	  31
-	]
+		day_of_year,
+		[
+		  31,
+		  29,
+		  31,
+		  30,
+		  31,
+		  30,
+		  31,
+		  31,
+		  30,
+		  31,
+		  30,
+		  31
+		]
     );
 
 (*
