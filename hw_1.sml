@@ -103,7 +103,7 @@ fun get_month (month: int) =
       | 10 => "October"
       | 11 => "November"
       | 12 => "December"
-      | _ => "";		
+      | _ => "";
 
 (*
  * date_to_string takes a Date and returns a string in the form Month Day, Year.
@@ -111,7 +111,25 @@ fun get_month (month: int) =
  * date: a Date
  *)
 fun date_to_string (date: (int * int * int)) =
-    get_month(#2 date) ^ ", " ^ Int.toString(#3 date) ^ " " ^ Int.toString(#1 date);
+	let
+		fun get_month (month: int) =
+			case month of
+				1 => "January"
+			  | 2 => "Febrary"
+			  | 3 => "March"
+			  | 4 => "April"
+			  | 5 => "May"
+			  | 6 => "June"
+			  | 7 => "July"
+			  | 8 => "August"
+			  | 9 => "September"
+			  | 10 => "October"
+			  | 11 => "November"
+			  | 12 => "December"
+			  | _ => "";
+	in
+		get_month(#2 date) ^ ", " ^ Int.toString(#3 date) ^ " " ^ Int.toString(#1 date)
+	end;
 
 (*
  * number_before_reaching_sum takes an integer sum and an int list numbers then returns an integer
