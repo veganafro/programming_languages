@@ -7,7 +7,7 @@
  * date_2: a Date
  *)
 fun is_older (date_1: int * int * int, date_2: int * int * int) =
-    if #1 date_1 = #1 date_2
+	if #1 date_1 = #1 date_2
 	then
 		if #2 date_1 = #2 date_2
 		then
@@ -24,9 +24,9 @@ fun is_older (date_1: int * int * int, date_2: int * int * int) =
  * month: an integer
  *)
 fun number_in_month (dates: (int * int * int) list, month: int) =
-    if null dates
-    then 0
-    else
+	if null dates
+	then 0
+	else
 		if #2 (hd dates) = month
 		then 1 + number_in_month(tl dates, month)
 		else 0 + number_in_month(tl dates, month);
