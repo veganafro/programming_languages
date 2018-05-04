@@ -182,5 +182,4 @@ fun get_oldest (current_oldest: (int * int * int), dates: (int * int * int) list
 fun oldest (dates: (int * int * int) list) =
     if null dates
     then NONE
-    else
-        SOME (get_oldest(hd dates, tl dates));
+    else SOME (get_oldest(hd dates, tl dates));
